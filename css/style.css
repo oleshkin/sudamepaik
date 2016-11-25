@@ -1,0 +1,19 @@
+body {
+	padding: 60px 20px 20px 20px;
+	background-image: url(../images/bg.jpg);
+}
+
+
+/* clearfix */
+
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+}
+.group:after {
+    clear: both;
+}
+.group {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
