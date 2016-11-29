@@ -1,19 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 body {
-	padding: 60px 20px 20px 20px;
+	font-size: 100%;
+	font-family: 'Roboto Slab', serif;
+	height:100%;
+}
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body, html {
+	height: 15%;
+}
+
+.container h1 {
+  position: absolute;
+  left: 100px;
+  width: 300px;
+  padding-right: 5%;
+  border-right: 2px solid white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+}
+
+/* site specific */
+.container {
+  width: 90%;
+  max-width: 768px;
+  margin: 0 auto;
+}
+.container::after {
+  /* clearfix */
+  content: '';
+  display: table;
+  clear: both;
+}
+.main-content {
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.fixed-bg {
+  position: relative;
+  min-height: 75%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 1;
+}
+
+
+/* For Desktop */
+@media only screen and (min-width: 600px) {
+  body, html {
+  	height: 95%;
+  }
+}
+
+
+
+
+
+
+.bg-1 {
 	background-image: url(../images/bg.jpg);
 }
 
+.logo {
+	display: inline-block;
+  position: absolute;
 
-/* clearfix */
+  right: 100px;
+	/*position: absolute;
+	top: 40%;
+	left: 45%;*/
+  width: 377px;
+  height: 106px;
+	background: url(../images/logo.png) center center no-repeat rgba(255,255,255,0.5);
+	padding:10px 150px 150px 15px;
+	border: 1px solid #cccccc;
+  border-radius: 20px;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  margin-top: -10px;
+	box-shadow: 1px 10px 100px 20px white;
+	text-indent: -99999px;
 
-.group:before,
-.group:after {
-    content: "";
-    display: table;
 }
-.group:after {
-    clear: both;
+
+.logo-center {
+
+	position: absolute;
+	top: 40%;
+	left: 45%;
+
+	background: url(../images/logo.png) center center no-repeat rgba(255,255,255,0.5);
+	padding:10px 150px 150px 15px;
+	border: 1px solid #cccccc;
+  border-radius: 20px;
+	box-shadow: 1px 10px 100px 20px white;
+	text-indent: -99999px;
+
 }
-.group {
-    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+
+
+
+.fixed-bg h1, .fixed-bg h2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-70%) translateY(-50%);
+  width: 90%;
+  max-width: 1170px;
+  text-align: center;
+  font-size: 30px;
+  font-size: 1.875rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+@media only screen and (min-width: 320px) {
+  .cd-fixed-bg h1, .cd-fixed-bg h2 {
+    font-size: 36px;
+  }
+}
+@media only screen and (min-width: 480px) {
+  .cd-fixed-bg {
+    background-attachment: fixed;
+  }
+  .cd-fixed-bg h1, .cd-fixed-bg h2 {
+    font-size: 48px;
+    font-weight: 300;
+  }
+}
+
+
+
+@media only screen and (min-width: 480px) {
+  .scrolling-bg {
+    padding: 8em 0;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 2;
+    font-weight: 300;
+  }
+}
+
+section.color-red {
+	background-color: #D84853;
+	color: white;
+}
+section.color-blue {
+	background-color: #0C8CD6;
+	color: white;
 }
