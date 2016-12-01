@@ -5,7 +5,11 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/.css">
+	<script src='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.js'></script>
+	<link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
+	<!-- <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.28.0/mapbox-gl.js'></script>
+	 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.28.0/mapbox-gl.css' rel='stylesheet' /> -->
+
 </head>
 <body>
 
@@ -22,20 +26,39 @@
 			</div>
 		</section>
 
-		<div class="map">
-			<a href="#anneta" class="logo">MTÜ Asenduskodu "Südamepaik"</a>
-		</div>
-
 		<section class="scrolling-bg color-blue">
 			<div class="container">
 				<h1>Контакты</h1>
 				<p>Estonia pst 30 - 1, Kohtla-Järve, 31021, Eesti.</p>
-				<p>Tel: +372 5302 0264, +372 7 111 685 </p>
+				<p>Tel: +372 5302 0264 / +372 7 111 685 </p>
 			</div>
 		</section>
-	<main/>
 
-<script src="http://localhost:35729/livereload.js">
+
+
+		<div id="map" class="fixed-bg">
+		</div>
+		<script>
+L.mapbox.accessToken = 'pk.eyJ1Ijoib2xlc2hrbyIsImEiOiJjaWlhZGphdmEwMDFtd25tMGN4cmoxdXQ4In0.WmdCR-y1L1kKFJN5xoe3SA';
+var map = L.mapbox.map('map', 'mapbox.streets')
+    .setView([59.32922,27.42626], 16);
+
+L.tileLayer( 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    subdomains: ['a','b','c']
+}).addTo( map );
+
+
+var marker = L.marker([59.32922,27.42652],{opacity: 0.9}).addTo(map);
+marker.bindPopup("<b>MTÜ Asenduskodu 'Südamepaik'</b><br>Estonia pst 30 - 1, Kohtla-Järve");
+map.scrollWheelZoom.disable();
+</script>
+	<main/>
+<script src="js/various.js"></script>
+
+<script src="http://localhost:35729/livereload.js"></script>
+
+
 </body>
 
 </html>

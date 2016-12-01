@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
 html * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 body {
 	font-size: 100%;
-	font-family: 'Roboto Slab', serif;
+	font-family: 'Ubuntu', sans-serif;
 	height:100%;
+  color: white;
 }
 * {
 	-webkit-box-sizing: border-box;
@@ -24,7 +24,6 @@ body, html {
   width: 300px;
   padding-right: 5%;
   border-right: 2px solid white;
-  font-family: 'Montserrat', sans-serif;
   font-size: 40px;
 }
 
@@ -158,11 +157,15 @@ body, html {
   }
 }
 
-section.color-red {
+.color-red {
 	background-color: #D84853;
-	color: white;
 }
-section.color-blue {
+.color-blue {
 	background-color: #0C8CD6;
-	color: white;
+}
+.color-dark-green {
+  background-color: #84A703;
+}
+.color-green {
+  background-color: #D0DC1D;
 }
